@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+    <div id="five"></div>
+    <div id="six"></div>
+    <div id="seven"></div>
+    <div id="eight"></div>
+    <div id="nine"></div>
+    <div id="ten"></div>
+  </body>
+</html>
+
+<script>
+  const name = "Tom";
+  const height = 150;
+  const age = Number(prompt("What is your age?"));
+  const weight = 30;
+  const hasTicket = true;
+
+  if (height > 130) {
+    if (hasTicket) {
+      if (age > 11) {
+        console.log("you can play");
+      } else {
+        console.log("Call your guardian");
+      }
+    } else {
+      console.log("You can not play");
+    }
+  }
+  const one = getElementById("one");
+  const two = getELementById("two");
+  const three = getElementById("three");
+  const four = getElementById("four");
+  const five = getElementbyId("five");
+  const six = getElementbyId("six");
+  const seven = getElementById("seven");
+  const eight = getElementById("eight");
+  const nine = getElementById("nine");
+  const ten = getElementById("ten");
+  let i = 0;
+  while (i < 100) {
+    i = i + 1;
+    one.innerHTML = i + 1;
+  }
+
+  let a = 30;
+  while (a < 70) {
+    a++;
+    two.innerHTML = a + 1;
+  }
+
+  let b = 20;
+  while (b > 1) {
+    b--;
+    three.innerHTML = b - 1;
+  }
+  let c = 0;
+  while (a < 100) {
+    c += 2;
+    four.innerHTML = c;
+  }
+  let d = 0;
+  while (d < 50) {
+    d % 2 == 0;
+    five.innerHTML = d;
+  }
+  let e = 0;
+  let counter = 0;
+  while (e < 50) {
+    e % 7 == 0;
+    counter++;
+    six.innerHTML = e;
+  }
+  eight.innerHTML = counter;
+  let f = 0;
+  while (f > 80) {
+    f % 5 == 0;
+    f % 3 == 0;
+    seven.innerHTML = f;
+  }
+  let g = "Javascript";
+  while (g < 100) {
+    nine.innerHTML = g;
+  }
+</script>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <pre id="output" style="line-height: 1">
+        ╒-------------╕
+        ║   *         ║
+        ║             ║
+        ╘-------------╛
+    </pre>
+    <button onclick="moveBackward()">left</button>
+    <button onlick="moveForward()">right</button>
+    <script>
+      const n = 20;
+      let position = 4;
+
+      function moveForward() {
+        position = position + 1;
+        draw();
+      }
+
+      function moveBackward() {
+        position = postition - 1;
+        draw();
+      }
+
+      let result = "r";
+      let i = 0;
+      while (i < n) {
+        result = result + "-";
+        i++;
+      }
+      result = result + "\n";
+
+      result = result + "║";
+
+      i = 0;
+      while (i < n) {
+        result = result + " ";
+        i++;
+      }
+      result = result + "║";
+    </script>
+  </body>
+</html>

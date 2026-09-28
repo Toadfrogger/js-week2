@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .board {
+        width: 300px;
+        height: 150px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuEiqTa5aoeUzhIuKjh-os1p14TugWwJxnTYRUUJ-Yzg&s=10");
+        border: 2px solid black;
+        position: relative;
+      }
+
+      .player {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        text-align: center;
+        font-size: 20px;
+        line-height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="board" class="board">
+      <div id="player" class="player">🧑‍🚀</div>
+    </div>
+
+    <button onclick="moveUp()">Top</button>
+    <button onclick="moveDown()">Bottom</button>
+    <button onclick="moveLeft()">Left</button>
+    <button onclick="moveRight()">Right</button>
+
+    <script>
+      let playerX = 0;
+      let playerY = 0;
+
+      // Keep these as numbers so math works!
+      const boardHeight = 150;
+      const boardWidth = 300;
+
+      const playerEl = document.getElementById("player");
+      const boardEl = document.getElementById("board");
+
+      // Use backticks (`) for variable interpolation
+      boardEl.style.width = `${boardWidth}px`;
+      boardEl.style.height = `${boardHeight}px`;
+
+      draw();
+
+      function moveUp() {
+        playerY = playerY - 10;
+        if (playerY < 0) {
+          playerY = boardHeight - 10;
+        }
+        draw();
+      }
+
+      function moveDown() {
+        playerY = playerY + 10;
+        if (playerY > boardHeight - 10) {
+          playerY = 0;
+        }
+        draw();
+      }
+
+      function moveRight() {
+        playerX = playerX + 10;
+        if (playerX > boardWidth - 10) {
+          playerX = 0;
+        }
+        draw();
+      }
+
+      function moveLeft() {
+        playerX = playerX - 10;
+        if (playerX < 0) {
+          playerX = boardWidth - 10;
+        }
+        draw();
+      }
+
+      function draw() {
+        // Backticks (`) and correct curly brace syntax (${playerX})
+        playerEl.style.top = `${playerY}px`;
+        playerEl.style.left = `${playerX}px`;
+      }
+    </script>
+  </body>
+</html>
